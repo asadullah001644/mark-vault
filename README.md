@@ -1,38 +1,10 @@
-<div align="center">
+## 📌 What is MarkVault?
 
-<img src="https://img.shields.io/badge/Node.js-24.x-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/Express.js-4.x-000000?style=for-the-badge&logo=express&logoColor=white" />
-<img src="https://img.shields.io/badge/MongoDB-8.x-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-<img src="https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
-<img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
-
-<br />
-<br />
-
-```
-██╗     ██╗███╗   ██╗██╗  ██╗██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗
-██║     ██║████╗  ██║██║ ██╔╝██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝
-██║     ██║██╔██╗ ██║█████╔╝ ██║   ██║███████║██║   ██║██║     ██║   
-██║     ██║██║╚██╗██║██╔═██╗ ╚██╗ ██╔╝██╔══██║██║   ██║██║     ██║   
-███████╗██║██║ ╚████║██║  ██╗ ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║   
-╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   
-```
-
-### **Your personal internet library — save, organize, and retrieve anything.**
-
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [API Reference](#-api-reference) • [Architecture](#-architecture) • [Author](#-author)
-
-</div>
-
----
-
-## 📌 What is LinkVault?
-
-LinkVault is a **production-ready RESTful API** for managing personal bookmarks. Save any URL with a title, description, and tags. Search through everything instantly. Share specific bookmarks publicly with a single flag.
+MarkVault is a **production-ready RESTful API** for managing personal bookmarks. Save any URL with a title, description, and tags. Search through everything instantly. Share specific bookmarks publicly with a single flag.
 
 Built as the first project in a serious 4-project backend engineering series — focusing on raw Express.js fundamentals, MongoDB document modeling, JWT authentication, and clean API design.
 
-> **Why this project?** Most bookmark tools are either too bloated or too simple. LinkVault is scoped exactly right — enough complexity to be real, enough restraint to be learnable.
+> **Why this project?** Most bookmark tools are either too bloated or too simple. MarkVault is scoped exactly right — enough complexity to be real, enough restraint to be learnable.
 
 ---
 
@@ -75,8 +47,8 @@ Built as the first project in a serious 4-project backend engineering series —
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/linkvault.git
-cd linkvault
+git clone https://github.com/yourusername/MarkVault.git
+cd MarkVault
 ```
 
 ### 2. Install dependencies
@@ -95,7 +67,7 @@ Open `.env` and fill in your values:
 
 ```env
 PORT=3000
-MONGODB_URI=mongodb://localhost:27017/linkvault
+MONGODB_URI=mongodb://localhost:27017/MarkVault
 JWT_SECRET=your_super_secret_key_min_32_chars
 JWT_EXPIRES_IN=7d
 NODE_ENV=development
@@ -186,7 +158,7 @@ Authorization: Bearer <your_token>
 ## 🏗 Architecture
 
 ```
-linkvault/
+MarkVault/
 ├── src/
 │   ├── config/
 │   │   └── db.js              # MongoDB connection
@@ -237,7 +209,7 @@ Each layer has exactly one responsibility. Routes don't touch the database. Cont
 
 **Why tags are embedded, not a separate collection**
 
-Tags in LinkVault are personal — your tags belong to you alone. There's no shared tag library, no tag following, no admin curation. Embedding tags as a string array inside the bookmark document means zero extra queries when fetching bookmarks. A `$set` aggregation update handles renaming across documents in one query.
+Tags in MarkVault are personal — your tags belong to you alone. There's no shared tag library, no tag following, no admin curation. Embedding tags as a string array inside the bookmark document means zero extra queries when fetching bookmarks. A `$set` aggregation update handles renaming across documents in one query.
 
 **Why soft delete over hard delete**
 
@@ -255,7 +227,7 @@ Zod is schema-first and TypeScript-friendly. You define the shape of valid data 
 Senior Frontend Engineer → Full Stack
 
 - Building this as part of a serious backend engineering curriculum covering Express, NestJS, Fastify, MongoDB, and PostgreSQL.
-- Part of a 4-project series: LinkVault → HireTrack → PulseBoard → PayFlow
+- Part of a 4-project series: MarkVault → HireTrack → PulseBoard → PayFlow
 
 ---
 
